@@ -1,7 +1,7 @@
 # Jumpy-Platformer
 An infinite-leveled vertical platformer that's kinda decent.
 
-Play it at: [shahank42.github.io/Jumpy-Platformer](shahank42.github.io/Jumpy-Platformer)
+Play it at: [https://shahank42.github.io/Jumpy-Platformer](https://shahank42.github.io/Jumpy-Platformer)
 
 <br />
 
