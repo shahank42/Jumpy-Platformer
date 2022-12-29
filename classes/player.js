@@ -25,6 +25,8 @@ class Player {
     }
 
     render() {
+        stroke(0);
+        strokeWeight(3);
         fill(game.world.playerColor);
         rect(this.pos.x, this.pos.y, this.width, this.height);
     }
@@ -91,6 +93,8 @@ class Player {
         if (this.top > height) {
             this.pos.x = game.world.playerStartPos.x;
             this.pos.y = game.world.playerStartPos.y;
+            game.totalScore -= 50;
+            game.totalScore = max(0, game.totalScore);
         }
     }
 

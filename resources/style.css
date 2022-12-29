@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+    background-color: #495D63;    ;
+}
+
+body {
+    margin: 0;
+    display: block;
+}
+
+
+
+header {
+    width: 100%;
+    background-color: #191919;
+}
+
+header > img {
+    margin: 0;
+    padding: 1px;   
+    position: relative;
+}
+
+#sketch {
+    margin: 0;
+    padding: 0;
+    display: block;
+    justify-content: center;
+    width: 100%
+
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    width:auto;
+    height: 100%;
+}

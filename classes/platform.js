@@ -14,7 +14,8 @@ class Platform {
     }
 
     render() {
-        noStroke();
+        stroke(0);
+        strokeWeight(2);
         fill(this.col);
         rect(this.x, this.y, this.width, this.height);
     }
