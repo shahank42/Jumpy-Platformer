@@ -8,32 +8,42 @@ body {
     display: block;
 }
 
-
-
-header {
-    width: 100%;
+header {    
     background-color: #191919;
+    display: flex;
+    justify-content: center;
 }
 
 header > img {
+    width: 100%;
     margin: 0;
     padding: 1px;   
-    position: relative;
 }
 
 #sketch {
-    margin: 0;
-    padding: 0;
     display: block;
     justify-content: center;
-    width: 100%
-
 }
 
 canvas {
-    display: block;
+    display: flex;
     position: absolute;
-    overflow: hidden;
-    width:auto;
     height: 100%;
+}
+
+.dpad-key {
+    font-size:45px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#fff;
+    border-color:#0b0e07;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    box-shadow:inset 0px -3px 7px 0px #29bbff;
+    text-shadow:inset 0px 1px 0px #263666;
+    background:linear-gradient(#2dabf9, #0688fa);
 }

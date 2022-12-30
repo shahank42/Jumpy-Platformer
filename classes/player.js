@@ -90,7 +90,7 @@ class Player {
     }
 
     handleBounds() {
-        if (this.top > height) {
+        if (this.top > height + 300) {
             this.pos.x = game.world.playerStartPos.x;
             this.pos.y = game.world.playerStartPos.y;
             game.totalScore -= 50;

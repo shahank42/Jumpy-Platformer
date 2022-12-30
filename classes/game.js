@@ -16,27 +16,36 @@ class Game {
 
         this.dom = {
 			isMobileDevice: new MobileDetect(window.navigator.userAgent),
-            leftButton: createButton("LEFT"),
-            rightButton: createButton("RIGHT"),
-            upButton: createButton("UP"),
+            leftButton: createButton("←"),
+            rightButton: createButton("→"),
+            upButton: createButton("↑"),
+            //resetButton: createButton("RESET LEVEL"),
+
             leftButtonPressed: false,
             rightButtonPressed: false,
             upButtonPressed: false,
+            resetButtonPressed: false,
 
             initializeDom: () => {
 				if (this.dom.isMobileDevice.mobile() || this.dom.isMobileDevice.tablet()) {
-                    this.dom.leftButton.position(width/2, height + 150)
+                    this.dom.leftButton.position(width/2 - 275, height + 250)
                     this.dom.leftButton.size(150, 150);
+                    this.dom.leftButton.addClass("dpad-key");
 
-                    this.dom.rightButton.position(width/2 + 175, height + 150)
+                    this.dom.rightButton.position(width/2 + 125, height + 250)
                     this.dom.rightButton.size(150, 150);
+                    this.dom.rightButton.addClass("dpad-key");
 
-                    this.dom.upButton.position(width/2 - 325, height + 150);
-                    this.dom.upButton.size(300, 150);
+                    this.dom.upButton.position(width/2 - 75, height + 150);
+                    this.dom.upButton.size(150, 150);
+                    this.dom.upButton.addClass("dpad-key");
 				}
+
+                //this.dom.resetButton.position(0, height + 100);
+                //this.dom.resetButton.size(200, 100);
             },
 
-            checkDPADPresses: () => {
+            checkButtonPresses: () => {
                 this.dom.leftButton.touchStarted(() => {
                     this.dom.leftButtonPressed = true;
                 });
@@ -62,10 +71,16 @@ class Game {
                 })
             },
 
-            handleDPADPresses: () => {
+            handleButtonPresses: () => {
+
+                //this.dom.resetButton.mouseClicked(() => {
+                  //  game.reset();
+                //});
+        
+
 				if (this.dom.isMobileDevice.mobile() || this.dom.isMobileDevice.tablet()) {
 					
-                    this.dom.checkDPADPresses();
+                    this.dom.checkButtonPresses();
 
                     if (this.dom.leftButtonPressed) {
                         this.player.vel.x = -this.player.moveSpeed;

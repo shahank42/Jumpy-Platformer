@@ -1,7 +1,7 @@
 let game;
 
 function setup() {
-    let canvas = createCanvas(700, 700);
+    let canvas = createCanvas(700, 690);
     canvas.parent("sketch");
 
     game = new Game();
@@ -25,7 +25,7 @@ function draw() {
     game.renderPlatforms();
 
     game.handleKeys();
-    game.dom.handleDPADPresses();
+    game.dom.handleButtonPresses();
 
     game.player.update();
 }
